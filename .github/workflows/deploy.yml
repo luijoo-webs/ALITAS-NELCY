@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      - run: npm install --no-audit --no-fund  # npm ci falla en Linux con lock hecho en Windows (deps opcionales wasm)
       - run: npx vitest run
       - run: npm run build
         env:
