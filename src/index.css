@@ -1,0 +1,161 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/big-shoulders-display';
+@import '@fontsource-variable/dm-sans/index.css';
+
+/*
+  Dirección visual v2 — bloques de color fuertes, tipografía condensada, estética de sticker.
+  Paleta apagada (v3): ladrillo y mostaza poco saturados sobre crema; el color fuerte queda para acentos.
+*/
+@theme {
+  --color-carbon: #1c1410;
+  --color-carbon-800: #2a201b;
+  --color-carbon-700: #3a2e27;
+  --color-maiz: #e4b660;
+  --color-maiz-300: #edcb8e;
+  --color-alas: #b5432f;
+  --color-alas-700: #963523;
+  --color-crema: #f3eadb;
+  --color-hueso: #fbf8f2;
+  --color-piedra: #75675d;
+
+  /* Colores de las salsas (decorativos) */
+  --color-bbq: #5b3626;
+  --color-picante: #a63b2c;
+  --color-maracuya: #dcac4e;
+  --color-tamarindo: #8d5e35;
+  --color-mostaza: #c79a45;
+
+  --font-display: 'Big Shoulders Display Variable', Impact, 'Arial Narrow', sans-serif;
+  --font-sans: 'DM Sans Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 12px;
+  --shadow-hard: 4px 4px 0 0 var(--color-carbon);
+  --shadow-hard-lg: 7px 7px 0 0 var(--color-carbon);
+
+  --animate-marquee: marquee var(--marquee-speed, 32s) linear infinite;
+  --animate-marquee-reverse: marquee var(--marquee-speed, 32s) linear infinite reverse;
+  --animate-spin-slow: spin 18s linear infinite;
+  --animate-kenburns: kenburns 18s ease-out both;
+  --animate-wobble: wobble 0.6s ease-in-out;
+  --animate-float: float 5s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes kenburns {
+    from { transform: scale(1.14); }
+    to { transform: scale(1.02); }
+  }
+  @keyframes wobble {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-6deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-3deg); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+  }
+  @keyframes rise {
+    from { transform: translateY(105%); }
+    to { transform: translateY(0); }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-hueso font-sans text-carbon antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-display font-black uppercase;
+    letter-spacing: 0.005em;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    @apply outline-3 outline-offset-2 outline-alas;
+  }
+  ::selection {
+    @apply bg-maiz text-carbon;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8;
+  }
+  /* Condensada: se ve más pequeña de lo que mide, por eso estos tamaños. */
+  .display { font-size: clamp(3.1rem, 8.2vw, 6.5rem); line-height: 0.88; }
+  .h1 { font-size: clamp(2.75rem, 6vw, 4.75rem); line-height: 0.92; }
+  .h2 { font-size: clamp(2.25rem, 4.6vw, 3.75rem); line-height: 0.95; }
+  .h3 { font-size: clamp(1.6rem, 2.4vw, 2rem); line-height: 1; }
+  .kicker {
+    @apply font-display text-base font-extrabold tracking-[0.14em] uppercase;
+  }
+  .price {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Tarjeta tipo sticker: borde y sombra dura */
+  .sticker {
+    @apply rounded-[var(--radius-card)] border-2 border-carbon;
+    box-shadow: var(--shadow-hard);
+  }
+}
+
+/* ── Animaciones al hacer scroll (las activa useReveal) ───────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--d, 0ms);
+}
+.reveal-wipe {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.7, 0, 0.2, 1);
+  transition-delay: var(--d, 0ms);
+}
+.reveal-pop {
+  opacity: 0;
+  transform: scale(0.6) rotate(-8deg);
+  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.34, 1.7, 0.5, 1);
+  transition-delay: var(--d, 0ms);
+}
+.is-visible.reveal { opacity: 1; transform: none; }
+.is-visible.reveal-wipe { clip-path: inset(0 0 0 0); }
+.is-visible.reveal-pop { opacity: 1; transform: rotate(var(--r, 0deg)); }
+
+/* Titulares que suben línea por línea al cargar */
+.line-mask { display: block; overflow: hidden; padding-bottom: 0.04em; }
+.line-mask > span {
+  display: block;
+  animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+.fade-in {
+  animation: fade-in 0.8s ease both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Botón sticker: se levanta al pasar y se hunde al presionar */
+.btn-hard {
+  box-shadow: var(--shadow-hard);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease;
+}
+.btn-hard:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--color-carbon); }
+.btn-hard:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 0 var(--color-carbon); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-pop { opacity: 1; transform: none; transition: none; }
+  .reveal-wipe { clip-path: none; transition: none; }
+  .line-mask > span, .fade-in { animation: none; }
+  .animate-marquee, .animate-marquee-reverse, .animate-spin-slow, .animate-kenburns, .animate-float { animation: none; }
+  [data-parallax] { transform: none !important; }
+}

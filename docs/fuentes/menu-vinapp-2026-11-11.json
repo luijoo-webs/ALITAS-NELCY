@@ -1,0 +1,66 @@
+{
+  "_fuente": "https://vinny.vinapp.co/?company=Alitasnelcy (JSON-LD schema.org del menú público)",
+  "_capturado": "2026-11-11",
+  "_nota": "SOLO REFERENCIA HISTÓRICA. Vinapp no se usa en el proyecto. Precios en COP; difieren de alitasnelcy.com/menu (ver docs/01-analisis-y-arquitectura.md). Confirmar con el restaurante antes de cargar. No enlazar las URLs de imagen (CDN de Vinapp).",
+  "restaurante": {
+    "nombre": "Alitas Nelcy",
+    "telefono": "+573218918754",
+    "direccion": "Transversal 26#18D-02 los fundadores",
+    "horario_vinapp": "Lunes a domingo 10:30 - 23:00"
+  },
+  "secciones": [
+    { "seccion": "COMBOS", "items": [
+      { "nombre": "COMBO #1", "descripcion": "5 Presas + Porcion de papas a la francesa", "precio": 15000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947348_1_ALITAS_NELCY_2026.jpg" },
+      { "nombre": "Porta Comida", "descripcion": "Porta comida cualquier tamaño", "precio": 1000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1768446631_1000000131.png" },
+      { "nombre": "COMBO #2", "descripcion": "7 Presas + Porcion de papas a la francesa", "precio": 21000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947416_1_ALITAS_NELCY_2026.jpg" },
+      { "nombre": "COMBO #3", "descripcion": "11 Presas + Porcion de papas a la francesa", "precio": 29000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947455_1_ALITAS_NELCY_2026.jpg" },
+      { "nombre": "COMBO #4", "descripcion": "14 Presas + Porcion de papas a la francesa", "precio": 34000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947436_1_ALITAS_NELCY_2026.jpg" },
+      { "nombre": "COMBO #5", "descripcion": "21 Presas + Porcion de papas a la francesa", "precio": 44000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947474_1_ALITAS_NELCY_2026.jpg" },
+      { "nombre": "COMBO #6", "descripcion": "28 Presas + Porcion de papas a la francesa", "precio": 54000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947385_1_ALITAS_NELCY_2026.jpg" },
+      { "nombre": "COMBO #7", "descripcion": "36 Presas + Porcion papas a la francesa", "precio": 64000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947493_1_ALITAS_NELCY_2026.jpg" },
+      { "nombre": "PECHUGA DE NELCY", "descripcion": "250 Gramos De Pechuga Apanada Mas Porción De Papas A La Francesa", "precio": 22000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789946875_DSC05205.jpg" },
+      { "nombre": "CRUNCHY DE NELCY", "descripcion": "250 Gramos De Trocitos De Pechuga Apanado Mas Porción De Papas A la Francesa", "precio": 20000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789946985_DSC05228.jpg" },
+      { "nombre": "TENDERS DE NELCY", "descripcion": "250 Gramos Tender De Pechugas Mas Porción De Papas A La Francesa", "precio": 20000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1789947094_DSC05237.jpg" }
+    ]},
+    { "seccion": "ALMUERZOS", "items": [
+      { "nombre": "Mojarra Frita", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 20000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772566939_18.jpg" },
+      { "nombre": "Porcion Arroz blanco", "descripcion": "Porcion de arroz blanco", "precio": 3000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772569002_IMG_6195.png" },
+      { "nombre": "Jarra agua panela", "descripcion": "Jarra de agua de panela con limon", "precio": 5000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1786906717_photo-output.jpeg" },
+      { "nombre": "Rabo Gisado", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 20000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772228173_DSC03351.jpg" },
+      { "nombre": "Sobrebarriga Guisada", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 16000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1783816857_sobrebarriga.jpg" },
+      { "nombre": "Carne Asada", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 18000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772227954_DSC03398.jpg" },
+      { "nombre": "Pechuga Asada", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 18000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772228036_DSC03371.jpg" },
+      { "nombre": "Arroz De Coco", "descripcion": "porcion de arroz de coco", "precio": 6000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1783817140_image0-scaled-e1631978308942.jpg" },
+      { "nombre": "Chuleta Asada", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 18000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772228089_DSC03362.jpg" },
+      { "nombre": "Pollo Frito", "descripcion": "pollo frito", "precio": 16000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1783817307_8594C7D4-9ABE-4351.jpeg" },
+      { "nombre": "Pollo Guisado", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 16000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772227536_DSC03255.jpg" },
+      { "nombre": "Carne Desmechada", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 16000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772227136_DSC03241.jpg" },
+      { "nombre": "carne molida", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 16000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772226953_DSC03213.jpg" },
+      { "nombre": "Carne Guisada", "descripcion": "Acompañado de frijol o lenteja tajada amarilla y ensalada arroz blanco o arroz de coco", "precio": 16000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772566568_DSC03351.jpg" },
+      { "nombre": "Porcion de sopa", "descripcion": "Porcion de sopa", "precio": 1000, "imagen": "https://vinapp.nyc3.digitaloceanspaces.com/images/prd/spaces/store/1772569238_IMG_6196.png" }
+    ]},
+    { "seccion": "ADICIONALES", "items": [
+      { "nombre": "PORCION DE PAPAS ALA FRANCESA", "precio": 6000, "imagen": "https://back.vinapp.co/store/360x36030254-2023-03-16-18-07-06.jpg" },
+      { "nombre": "PRESA ADICIONAL UNA SOLA", "precio": 3000, "imagen": "https://back.vinapp.co/store/360x360876094-2023-03-17-16-02-57.jpg" },
+      { "nombre": "Adicional de BBQ", "precio": 1000 },
+      { "nombre": "Adicional de BBQ Picante", "precio": 1000 },
+      { "nombre": "Adicional de BBQ Maracuya", "precio": 1000 },
+      { "nombre": "Adicional de BBQ Tamarindo", "precio": 1000 },
+      { "nombre": "Adicional de Miel Mostaza", "precio": 1000 }
+    ]},
+    { "seccion": "BEBIDAS", "items": [
+      { "nombre": "QUATRO P400", "precio": 5000 },
+      { "nombre": "COCA COLA P400 PERSONAL", "precio": 5000 },
+      { "nombre": "COCA COLA 1.5", "precio": 10000 },
+      { "nombre": "SPRITE 1.5", "precio": 9000 },
+      { "nombre": "QUATRO 1.5", "precio": 9000 },
+      { "nombre": "JUGO HIT PERSONAL P500", "precio": 5000 },
+      { "nombre": "JUGO HIT TETRA CAJA", "precio": 8000 },
+      { "nombre": "COLOMBIANA POSTOBON 1.5", "precio": 9000 },
+      { "nombre": "BOTELLA DE AGUA", "precio": 2500 },
+      { "nombre": "MANZANA POSTOBON 1.5", "precio": 9000 },
+      { "nombre": "KOLA ROMANN 1.5", "precio": 9000 },
+      { "nombre": "SODA HATSU ROSADA", "precio": 5000 }
+    ]}
+  ]
+}
