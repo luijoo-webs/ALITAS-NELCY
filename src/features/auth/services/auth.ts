@@ -14,7 +14,8 @@ export function authErrorMessage(error: unknown): string {
   return 'No pudimos completar la operación. Inténtalo de nuevo.'
 }
 
-const origin = () => window.location.origin
+// Incluye la ruta base (GitHub Pages sirve en /ALITAS-NELCY/)
+const origin = () => window.location.origin + import.meta.env.BASE_URL.replace(/\/$/, '')
 
 export async function signIn({ email, password }: LoginInput) {
   const { error } = await db().auth.signInWithPassword({ email, password })

@@ -41,4 +41,4 @@ export const router = createBrowserRouter([
       { index: true, lazy: async () => ({ Component: (await import('@/features/admin/pages/DashboardPage')).DashboardPage }) },
     ],
   },
-])
+], { basename: import.meta.env.BASE_URL.replace(/\/$/, '') || '/' })
