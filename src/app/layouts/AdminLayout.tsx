@@ -20,25 +20,25 @@ const NAV: { group: string; items: Item[] }[] = [
   {
     group: 'Operación',
     items: [
-      { to: '/admin/pedidos', label: 'Pedidos', icon: ClipboardList, perm: 'orders.read', soon: 'Fase 5' },
-      { to: '/admin/venta', label: 'Venta manual', icon: Store, perm: 'orders.create_manual', soon: 'Fase 5' },
-      { to: '/admin/catalogo', label: 'Menú y productos', icon: UtensilsCrossed, perm: 'catalog.manage', soon: 'Fase 5' },
-      { to: '/admin/clientes', label: 'Clientes', icon: UsersRound, perm: 'customers.read', soon: 'Fase 5' },
+      { to: '/admin/pedidos', label: 'Pedidos', icon: ClipboardList, perm: 'orders.read' },
+      { to: '/admin/venta', label: 'Venta manual', icon: Store, perm: 'orders.create_manual' },
+      { to: '/admin/catalogo', label: 'Menú y productos', icon: UtensilsCrossed, perm: 'catalog.manage' },
+      { to: '/admin/clientes', label: 'Clientes', icon: UsersRound, perm: 'customers.read' },
     ],
   },
   {
     group: 'Inventario',
     items: [
-      { to: '/admin/inventario', label: 'Ingredientes', icon: Boxes, perm: 'inventory.read', soon: 'Fase 4' },
-      { to: '/admin/compras', label: 'Compras', icon: Truck, perm: 'purchases.manage', soon: 'Fase 4' },
+      { to: '/admin/inventario', label: 'Ingredientes', icon: Boxes, perm: 'inventory.read' },
+      { to: '/admin/compras', label: 'Compras', icon: Truck, perm: 'purchases.manage' },
     ],
   },
   {
     group: 'Administración',
     items: [
-      { to: '/admin/reportes', label: 'Reportes', icon: BarChart3, perm: 'reports.read', soon: 'Fase 7' },
-      { to: '/admin/usuarios', label: 'Usuarios y roles', icon: ShieldCheck, perm: 'users.manage', soon: 'Fase 7' },
-      { to: '/admin/configuracion', label: 'Configuración', icon: Settings, perm: 'settings.manage', soon: 'Fase 5' },
+      { to: '/admin/reportes', label: 'Reportes', icon: BarChart3, perm: 'reports.read' },
+      { to: '/admin/usuarios', label: 'Usuarios y roles', icon: ShieldCheck, perm: 'users.manage' },
+      { to: '/admin/configuracion', label: 'Configuración', icon: Settings, perm: 'settings.manage' },
     ],
   },
 ]

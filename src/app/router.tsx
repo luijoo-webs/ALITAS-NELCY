@@ -27,6 +27,8 @@ export const router = createBrowserRouter([
           return { element: <RequireAuth><AccountPage /></RequireAuth> }
         },
       },
+      { path: '/checkout', lazy: async () => ({ Component: (await import('@/features/cart/CheckoutPage')).CheckoutPage }) },
+      { path: '/pedido/:token', lazy: async () => ({ Component: (await import('@/features/cart/TrackOrderPage')).TrackOrderPage }) },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
@@ -39,6 +41,15 @@ export const router = createBrowserRouter([
     },
     children: [
       { index: true, lazy: async () => ({ Component: (await import('@/features/admin/pages/DashboardPage')).DashboardPage }) },
+      { path: 'pedidos', lazy: async () => ({ Component: (await import('@/features/admin/pages/OrdersPage')).OrdersPage }) },
+      { path: 'venta', lazy: async () => ({ Component: (await import('@/features/admin/pages/ManualSalePage')).ManualSalePage }) },
+      { path: 'catalogo', lazy: async () => ({ Component: (await import('@/features/admin/pages/CatalogPage')).CatalogPage }) },
+      { path: 'clientes', lazy: async () => ({ Component: (await import('@/features/admin/pages/CustomersPage')).CustomersPage }) },
+      { path: 'inventario', lazy: async () => ({ Component: (await import('@/features/admin/pages/InventoryPage')).InventoryPage }) },
+      { path: 'compras', lazy: async () => ({ Component: (await import('@/features/admin/pages/PurchasesPage')).PurchasesPage }) },
+      { path: 'reportes', lazy: async () => ({ Component: (await import('@/features/admin/pages/ReportsPage')).ReportsPage }) },
+      { path: 'usuarios', lazy: async () => ({ Component: (await import('@/features/admin/pages/UsersPage')).UsersPage }) },
+      { path: 'configuracion', lazy: async () => ({ Component: (await import('@/features/admin/pages/SettingsPage')).SettingsPage }) },
     ],
   },
 ], { basename: import.meta.env.BASE_URL.replace(/\/$/, '') || '/' })

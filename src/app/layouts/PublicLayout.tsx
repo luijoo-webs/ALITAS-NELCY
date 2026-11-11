@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { SiteHeader } from './SiteHeader'
 import { SiteFooter } from './SiteFooter'
+import { CartDrawer } from '@/features/cart/CartDrawer'
 
 export function PublicLayout() {
   const { pathname, hash } = useLocation()
@@ -19,6 +20,7 @@ export function PublicLayout() {
         <Outlet />
       </main>
       <SiteFooter />
+      <CartDrawer />
     </>
   )
 }

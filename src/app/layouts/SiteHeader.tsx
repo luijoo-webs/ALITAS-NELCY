@@ -4,6 +4,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { Menu, UserRound, X } from 'lucide-react'
 import { ButtonLink } from '@/components/ui/button'
 import { useAuth } from '@/contexts/AuthContext'
+import { CartButton } from '@/features/cart/CartDrawer'
 import { media } from '@/config/media'
 import { cn } from '@/lib/cn'
 
@@ -67,6 +68,7 @@ export function SiteHeader() {
           >
             <UserRound className="size-5" />
           </Link>
+          <CartButton className="relative grid size-11 place-items-center rounded-[10px] border-2 border-transparent transition-colors hover:border-hueso/30" />
           <ButtonLink to="/menu" size="sm" className="hidden sm:inline-flex">
             Pedir ahora
           </ButtonLink>

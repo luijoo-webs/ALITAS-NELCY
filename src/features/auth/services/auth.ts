@@ -57,7 +57,10 @@ export interface MyCustomer {
 }
 
 export async function fetchMyCustomer(): Promise<MyCustomer | null> {
-  const { data, error } = await db().from('customers').select('id, full_name, phone, email').maybeSingle()
+  // Filtrar por usuario: el personal con customers.read ve a todos los clientes por RLS.
+  const uid = (await db().auth.getSession()).data.session?.user.id
+  if (!uid) return null
+  const { data, error } = await db().from('customers').select('id, full_name, phone, email').eq('user_id', uid).maybeSingle()
   if (error) throw error
   return data
 }
