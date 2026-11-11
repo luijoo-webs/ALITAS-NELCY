@@ -20,5 +20,7 @@ export function db(): SupabaseClient {
 }
 
 export function publicImageUrl(path: string) {
+  // Fotos iniciales del menú viven en public/static; las subidas desde el panel, en Storage.
+  if (path.startsWith('static/')) return import.meta.env.BASE_URL + path
   return db().storage.from('product-images').getPublicUrl(path).data.publicUrl
 }

@@ -112,7 +112,8 @@
   transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
   transition-delay: var(--d, 0ms);
 }
-.reveal-wipe {
+/* El recorte va en los hijos: si se recorta el elemento observado, IntersectionObserver nunca lo ve entrar. */
+.reveal-wipe > * {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s cubic-bezier(0.7, 0, 0.2, 1);
   transition-delay: var(--d, 0ms);
@@ -124,7 +125,7 @@
   transition-delay: var(--d, 0ms);
 }
 .is-visible.reveal { opacity: 1; transform: none; }
-.is-visible.reveal-wipe { clip-path: inset(0 0 0 0); }
+.is-visible.reveal-wipe > * { clip-path: inset(0 0 0 0); }
 .is-visible.reveal-pop { opacity: 1; transform: rotate(var(--r, 0deg)); }
 
 /* Titulares que suben línea por línea al cargar */
@@ -154,7 +155,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal-pop { opacity: 1; transform: none; transition: none; }
-  .reveal-wipe { clip-path: none; transition: none; }
+  .reveal-wipe > * { clip-path: none; transition: none; }
   .line-mask > span, .fade-in { animation: none; }
   .animate-marquee, .animate-marquee-reverse, .animate-spin-slow, .animate-kenburns, .animate-float { animation: none; }
   [data-parallax] { transform: none !important; }
