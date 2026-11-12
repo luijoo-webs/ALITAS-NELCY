@@ -52,9 +52,9 @@ function Hero() {
       <div ref={bg} data-parallax className="absolute -inset-y-24 inset-x-0 -z-10">
         <img src={media.combo4} alt="" className="size-full animate-kenburns object-cover" {...{ fetchpriority: 'high' }} />
       </div>
-      <div className="absolute inset-0 -z-10 bg-carbon/60" aria-hidden />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-carbon/90 via-carbon/60 to-carbon/20" aria-hidden />
 
-      <div className="container-page relative flex min-h-[calc(100svh-4rem)] flex-col justify-end pb-16 pt-14 md:min-h-[calc(100svh-5rem)] md:pb-24">
+      <div className="container-page relative flex min-h-[calc(100svh-4rem)] flex-col justify-center py-16 md:min-h-[calc(100svh-5rem)]">
         <h1 className="display text-maiz">
           {lines.map((l, i) => (
             <span key={l.text} className="line-mask">
@@ -62,6 +62,10 @@ function Hero() {
             </span>
           ))}
         </h1>
+
+        <p className="fade-in mt-5 text-lg text-hueso/85 md:text-xl" style={{ '--d': '700ms' } as CSSProperties}>
+          5 salsas de la casa · Los Fundadores, Valledupar
+        </p>
 
         <div className="fade-in mt-8 flex flex-wrap items-center gap-4" style={{ '--d': '880ms' } as CSSProperties}>
           <ButtonLink to="/menu" size="lg">
