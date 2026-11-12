@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight, MessageCircle } from 'lucide-react'
 import type { Product } from '@/types/domain'
 import { ButtonLink, buttonClass } from '@/components/ui/button'
 import { Reveal } from '@/components/shared/Reveal'
-import { Marquee, Star } from '@/components/shared/Marquee'
+import { Marquee } from '@/components/shared/Marquee'
 import { SpinBadge } from '@/components/shared/SpinBadge'
 import { OpenStatus } from '@/components/shared/OpenStatus'
 import { media, SAUCES, SAUCE_NAMES } from '@/config/media'
@@ -44,9 +44,7 @@ function Hero() {
   const bg = useParallax<HTMLDivElement>(160)
   const lines: { text: string; className?: string }[] = [
     { text: 'Alitas' },
-    { text: 'crocantes,' },
-    { text: 'cinco salsas', className: 'text-hueso' },
-    { text: 'de la casa', className: 'text-hueso' },
+    { text: 'crocantes', className: 'text-hueso' },
   ]
 
   return (
@@ -57,21 +55,13 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-carbon/60" aria-hidden />
 
       <div className="container-page relative flex min-h-[calc(100svh-4rem)] flex-col justify-end pb-16 pt-14 md:min-h-[calc(100svh-5rem)] md:pb-24">
-        <p className="fade-in kicker flex flex-wrap items-center gap-3 text-hueso/90" style={{ '--d': '100ms' } as CSSProperties}>
-          Alitas <Star className="size-3.5 text-maiz" /> Almuerzos <Star className="size-3.5 text-maiz" /> Valledupar
-        </p>
-
-        <h1 className="display mt-4 text-maiz">
+        <h1 className="display text-maiz">
           {lines.map((l, i) => (
             <span key={l.text} className="line-mask">
               <span className={l.className} style={{ '--d': `${200 + i * 110}ms` } as CSSProperties}>{l.text}</span>
             </span>
           ))}
         </h1>
-
-        <p className="fade-in mt-6 max-w-md text-lg leading-relaxed text-hueso/85" style={{ '--d': '750ms' } as CSSProperties}>
-          Combos con papas a la francesa y almuerzos de comida corriente en Los Fundadores. Desde 2022.
-        </p>
 
         <div className="fade-in mt-8 flex flex-wrap items-center gap-4" style={{ '--d': '880ms' } as CSSProperties}>
           <ButtonLink to="/menu" size="lg">
